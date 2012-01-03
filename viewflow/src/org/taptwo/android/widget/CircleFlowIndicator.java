@@ -133,6 +133,8 @@ public class CircleFlowIndicator extends View implements FlowIndicator,
 		default:
 			mPaintInactive.setStyle(Style.STROKE);
 		}
+
+		mPaintInactive.setStrokeWidth(2f);
 		mPaintInactive.setColor(inactiveColor);
 
 		// Select the paint type given the type attr
@@ -143,6 +145,8 @@ public class CircleFlowIndicator extends View implements FlowIndicator,
 		default:
 			mPaintActive.setStyle(Style.FILL);
 		}
+
+		mPaintInactive.setStrokeWidth(2f);
 		mPaintActive.setColor(activeColor);
 	}
 
@@ -159,7 +163,7 @@ public class CircleFlowIndicator extends View implements FlowIndicator,
 			count = viewFlow.getViewsCount();
 		}
 		
-		float circleSeparation = 2*radius+radius;
+		float circleSeparation = 2.5*radius+radius;
 		//this is the amount the first circle should be offset to make the entire thing centered
 		float centeringOffset = 0;
 		
